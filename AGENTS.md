@@ -24,7 +24,7 @@ Ejecuta los pasos en orden. Si alguno falla, no hagas commit: corrige o pregunta
 
 **Paso 4. Actualizar el banco de memoria.** Si el cambio modifica el estado del proyecto (algo hecho, una decisión, un bloqueo), actualiza `memory-bank/progress.md` (y `techContext.md` si cambia una decisión técnica) y añádelo al mismo commit.
 
-**Paso 5. Preparar y revisar lo que se commitea.** Usa `git add` con rutas concretas, nunca `git add .` ni `git add -A`. Revisa `git diff --cached --stat` y ejecuta `git diff --cached | grep -niE 'password|secret|api[_-]?key|token|private key'`: no debe mostrar credenciales. Tampoco debe haber datos reales de pacientes, solo datos sintéticos.
+**Paso 5. Preparar y revisar lo que se commitea.** Usa `git add` con rutas concretas, nunca `git add .` ni `git add -A`. Revisa `git diff --cached --stat` y ejecuta `git diff --cached -- . ':!AGENTS.md' ':!.agents' | grep -niE 'password|secret|api[_-]?key|token|private key'`: no debe mostrar credenciales (se excluyen `AGENTS.md` y `.agents/` porque nombran esas palabras como texto). Tampoco debe haber datos reales de pacientes, solo datos sintéticos.
 
 **Paso 6. Hacer el commit y reportar.** Formato del mensaje: `tipo(alcance): descripción breve en español`, con tipo `feat`, `fix`, `docs`, `chore`, `refactor` o `test`. Al terminar, informa el hash del commit y un resumen de lo que cambió.
 
