@@ -10,22 +10,23 @@
 
 - [x] **Ampliación de company-choice.md** — Detalle de la idea del estudiante: CRM integral + asistente IA con RAG para HealthCore (commit `5f3da1a` en `main`). La idea propone un agente central que conecta ambas APIs (EHR US + UK, facturación, reservas, personal) y permite consultas en lenguaje natural. (Fuente: company-choice.md, secciones "Empresa elegida: HealthCore" y "M1 idea de Agente de IA")
 
-- [x] **Briefing completo de HealthCore** — Creación de `BRIEFING.md` con el briefing de HealthCore extraído del syllabus, incluyendo las 7 áreas (Operaciones Clínicas, Experiencia del Paciente, Facturación, Cumplimiento, Personas, Tecnología, Dirección Ejecutiva), sus responsables con nombre y cargo, problemas específicos y datos cuantitativos (commit `69b021a` en rama `feature/agent-memory-bank`). Este commit es el HEAD actual. (Fuente: BRIEFING.md, git log)
+- [x] **Briefing completo de HealthCore** — Creación de `BRIEFING.md` con el briefing de HealthCore extraído del syllabus, incluyendo las 7 áreas (Operaciones Clínicas, Experiencia del Paciente, Facturación, Cumplimiento, Personas, Tecnología, Dirección Ejecutiva), sus responsables con nombre y cargo, problemas específicos y datos cuantitativos (commit `69b021a` en rama `feature/agent-memory-bank`). (Fuente: BRIEFING.md, git log)
 
+- [x] **Banco de memoria** — `memory-bank/projectbrief.md`, `techContext.md` y `progress.md` con el contexto de negocio (HealthCore, las 7 áreas, restricciones HIPAA y UK GDPR) y el técnico (sistemas heredados, mapa de carpetas, decisiones y lo "No definido") (commit `35b74eb`). (Fuente: git log)
+
+- [x] **AGENTS.md** — Archivo raíz con lo que el agente lee al inicio, un flujo de 6 pasos antes de cada commit y lo que no se modifica sin confirmación (commit `283802b`). (Fuente: git log)
+
+- [x] **Reglas en .agents/rules** — `estructura-monorepo.md` (siempre activa) y `datos-de-pacientes.md` (por patrón de archivo) (commit `0e0b6fc`). (Fuente: git log)
+
+- [x] **Skill en .agents/skills** — `actualizar-banco-de-memoria`, con objetivo único, inputs documentados y 4 criterios de aceptación verificables (commit `eb1b82a`). (Fuente: git log)
 
 ## En curso
 
-- [ ] **Banco de memoria del monorepo** — Creación de `memory-bank/projectbrief.md`, `memory-bank/techContext.md` y `memory-bank/progress.md` (este archivo) con la documentación estructurada del proyecto en español. Pendiente de commit.
+- Sin tareas en curso; solo queda el pull request a `main`.
 
 ## Pendiente
 
-- [ ] **Crear AGENTS.md** — Archivo raíz que define cómo opera cualquier agente de código en este repo: (1) qué archivos del banco de memoria debe leer al inicio de cada sesión; (2) un flujo obligatorio de al menos 4 pasos ordenados y explícitos antes de cada commit; (3) qué carpetas y archivos no puede modificar sin confirmación explícita del desarrollador. (Fuente: enunciado del hito)
-
-- [ ] **Configurar .agents/rules** — Reglas de la herramienta de desarrollo (Cursor o GitHub Copilot) para definir el comportamiento del agente de IA dentro del monorepo. Debe incluir instrucciones sobre qué carpetas usar, cómo documentar, qué convenciones seguir y al menos una regla con alcance de aplicación explícito (siempre activa, por patrón de archivo o solicitada). No existe aún el directorio `.agents/`. (Fuente: tarea pendiente identificada)
-
-- [ ] **Crear skill en .agents/skills** — Habilidad reutilizable para el agente de desarrollo, ubicada dentro de la configuración de la herramienta (`.agents/skills/`). Debe tener un objetivo único, inputs documentados y criterios de aceptación explícitos y verificables. Complementa a `skills/` (código de producto). (Fuente: tarea pendiente identificada)
-
-- [ ] **Pull Request a main** — Fusionar la rama `feature/agent-memory-bank` (commit actual `69b021a`) en `main` de este mismo repositorio, desde `feature/agent-memory-bank`, con un enlace directo a AGENTS.md en la descripción. Actualmente `feature/agent-memory-bank` tiene 1 commit adicional respecto a `main` (`5f3da1a`). (Fuente: git log)
+- [ ] **Pull Request a main** — Abrir un PR de `feature/agent-memory-bank` a `main` de este mismo repositorio, con un enlace directo a `AGENTS.md` en la descripción, después de ejecutar el flujo de commit de `AGENTS.md`. (Fuente: enunciado del hito)
 
 ## Bloqueos o dudas abiertas
 
