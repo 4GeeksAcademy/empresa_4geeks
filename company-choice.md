@@ -38,6 +38,8 @@ El agente se conecta automáticamente con el sistema de recordatorios y asistenc
 
 ## Departamentos que más me interesan
 
-**Experiencia del Paciente y Acceso:** 22% de no-shows en la red, unos 1,8 millones de dólares al año en citas perdidas, y no existe un sistema de reservas online compartido entre EE.UU. y Reino Unido. Un agente que prediga qué citas se van a perder y avise a tiempo tiene impacto directo en ingresos y en la experiencia del paciente.
+**Operaciones Clínicas:** las 12 clínicas operan cada una por su lado, con dos sistemas de historia clínica (EHR) que no se comunican entre EE.UU. y Reino Unido. El personal dedica 35 minutos al día a documentación que la IA podría apoyar. Una API unificada de historia clínica que conecte ambos sistemas resuelve justo este problema.
 
-**Ciclo de Ingresos y Facturación:** tasa de rechazo de reclamaciones del 14% en EE.UU., más del doble de la media del sector (5-8%), con codificación inconsistente entre sedes. Una IA que revise reclamaciones antes de enviarlas y sugiera códigos a partir de notas clínicas tiene un retorno económico claro.
+**Tecnología:** el equipo de James Osei (6 personas) administra un mosaico de sistemas sin capa de datos compartida ni monitoreo. Una API central que unifique datos de pacientes, citas, facturación y personal es la base para todo lo demás, incluido el CRM integral de la idea de agente.
+
+
