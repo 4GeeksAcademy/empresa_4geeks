@@ -4,7 +4,7 @@ Estoy familiarizado con la industria medica y me parecieron interesantes 2 probl
 
 el milestone map seria crear un crm integral o un dashboard que permita la conexion de ambas apis a un solo sistema que refleje toda la operacion, que se tenga un sistema rag y un asistente ia que permita cargar toda la info que se pregunte sin buscar carpeta por carpeta, que se conecte con recordatorios y asistencias de citas para obtener data de citas, ingresos, materiales, costos, revenue, facturacion etc.
 
-## M1 idea de Agente de IA
+## Mi idea de Agente de IA
 
 ### Agente Central: CRM Integral de HealthCore + Asistente IA Unificado
 
@@ -35,3 +35,9 @@ El agente se conecta automáticamente con el sistema de recordatorios y asistenc
 - **Visibilidad unificada** de citas, ingresos, costos, revenue, facturación, materiales
 - **Automatización de insights** — alertas de anomalías, predicciones de no-shows, análisis de rechazos
 - **Sistema RAG actualizado** que aprende de la operación y mejora sus respuestas
+
+## Departamentos que más me interesan
+
+**Experiencia del Paciente y Acceso:** 22% de no-shows en la red, unos 1,8 millones de dólares al año en citas perdidas, y no existe un sistema de reservas online compartido entre EE.UU. y Reino Unido. Un agente que prediga qué citas se van a perder y avise a tiempo tiene impacto directo en ingresos y en la experiencia del paciente.
+
+**Ciclo de Ingresos y Facturación:** tasa de rechazo de reclamaciones del 14% en EE.UU., más del doble de la media del sector (5-8%), con codificación inconsistente entre sedes. Una IA que revise reclamaciones antes de enviarlas y sugiera códigos a partir de notas clínicas tiene un retorno económico claro.
