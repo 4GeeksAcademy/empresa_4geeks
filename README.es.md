@@ -299,6 +299,24 @@ ai-engineering-company-project-monorepo/
 
 ---
 
+## Sitio web público de HealthCore
+
+Landing page (`index.html`) y formulario de registro (`application.html`) con validación en `validation.js`. Estilos con Tailwind CSS v4 por CDN.
+
+### Cómo ejecutarlo (compatible con Codespaces)
+
+Desde la raíz del repositorio:
+
+```bash
+npx http-server . -p 3000 -a 0.0.0.0
+```
+
+Después abre el puerto 3000 en la pestaña **Ports** y, para compartirlo, cambia su visibilidad a **Public**.
+
+La especificación de los campos del formulario está en `docs/form-spec.md`, porque el `BRIEFING.md` no define los campos.
+
+---
+
 ## Contribuidores
 
 Esta plantilla fue creada como parte del Programa de Carrera de Ingeniería de IA de 4Geeks Academy por [@marcogonzalo](https://www.linkedin.com/in/marcogonzalo) y [@alezanchezr](https://x.com/alesanchezr), junto a otros muchos colaboradores. Descubre más sobre nuestro [Curso de Ingeniería de IA](https://4geeksacademy.com/es/programas-de-carrera/ingenieria-ia) y sobre [otros cursos](https://4geeksacademy.com/es/comparar-programas).

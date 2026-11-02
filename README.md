@@ -299,6 +299,14 @@ ai-engineering-company-project-monorepo/
 
 ---
 
+## Cómo ejecutar el sitio
+
+```bash
+npx http-server . -p 3000 -a 0.0.0.0
+```
+
+---
+
 ## Contributors
 
 This template was built as part of the 4Geeks Academy AI Engineering Career Program by [@marcogonzalo](https://www.linkedin.com/in/marcogonzalo) and [@alesanchezr](https://x.com/alesanchezr) and many other contributors. Find out more about our [AI Engineering Course](https://4geeksacademy.com/en/career-programs/ai-engineering), and [other courses](https://4geeksacademy.com/en/program-comparison).
