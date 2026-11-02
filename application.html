@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservar cita | HealthCore</title>
+  <meta name="description" content="Completa tu registro y solicita tu cita en una de las 12 clínicas de HealthCore en EE.UU. y Reino Unido.">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-50 text-slate-700">
+
+  <header class="bg-white shadow-sm">
+    <div class="mx-auto flex max-w-3xl items-center justify-between px-4 py-4">
+      <a href="index.html" class="text-2xl font-bold text-teal-700">HealthCore</a>
+      <a href="index.html" class="text-sm hover:text-teal-700">← Volver al inicio</a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-3xl px-4 py-10">
+    <h1 class="text-2xl font-bold text-slate-900 md:text-3xl">Reserva tu cita</h1>
+    <p class="mt-2 text-slate-600">Los campos marcados con * son obligatorios.</p>
+
+    <form id="formulario" novalidate class="mt-8 space-y-8" aria-label="Formulario de registro de paciente">
+
+      <!-- GRUPO 1: DATOS PERSONALES -->
+      <fieldset class="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+        <legend class="px-2 text-lg font-semibold text-teal-700">Datos personales</legend>
+        <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+
+          <div>
+            <label for="nombre" class="block text-sm font-medium">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" required autocomplete="given-name" aria-describedby="error-nombre" class="mt-1 w-full rounded border border-slate-300 px-3 py-2 focus:border-teal-700 focus:outline focus:outline-2 focus:outline-teal-700">
+            <p id="error-nombre" class="mt-1 hidden text-sm text-red-700"></p>
+          </div>
+
+          <div>
+            <label for="apellido" class="block text-sm font-medium">Apellido *</label>
+            <input type="text" id="apellido" name="apellido" required autocomplete="family-name" aria-describedby="error-apellido" class="mt-1 w-full rounded border border-slate-300 px-3 py-2 focus:border-teal-700 focus:outline focus:outline-2 focus:outline-teal-700">
+            <p id="error-apellido" class="mt-1 hidden text-sm text-red-700"></p>
+          </div>
+
+          <div>
+            <label for="nacimiento" class="block text-sm font-medium">Fecha de nacimiento *</label>
+            <input type="date" id="nacimiento" name="nacimiento" required autocomplete="bday" aria-describedby="error-nacimiento" class="mt-1 w-full rounded border border-slate-300 px-3 py-2 focus:border-teal-700 focus:outline focus:outline-2 focus:outline-teal-700">
+            <p id="error-nacimiento" class="mt-1 hidden text-sm text-red-700"></p>
+          </div>
+
+          <div>
+            <label for="correo" class="block text-sm font-medium">Correo electrónico *</label>
+            <input type="email" id="correo" name="correo" required autocomplete="email" aria-describedby="error-correo" class="mt-1 w-full rounded border border-slate-300 px-3 py-2 focus:border-teal-700 focus:outline focus:outline-2 focus:outline-teal-700">
+            <p id="error-correo" class="mt-1 hidden text-sm text-red-700"></p>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label for="telefono" class="block text-sm font-medium">Teléfono *</label>
+            <input type="tel" id="telefono" name="telefono" required autocomplete="tel" aria-describedby="error-telefono" class="mt-1 w-full rounded border border-slate-300 px-3 py-2 focus:border-teal-700 focus:outline focus:outline-2 focus:outline-teal-700">
+            <p id="error-telefono" class="mt-1 hidden text-sm text-red-700"></p>
+          </div>
+
+        </div>
+      </fieldset>
+
+      <!-- GRUPO 2: DATOS DE LA CITA -->
+      <fieldset class="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+        <legend class="px-2 text-lg font-semibold text-teal-700">Datos de la cita</legend>
+        <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+
+          <div>
+            <label for="pais" class="block text-sm font-medium">País *</label>
+            <select id="pais" name="pais" required aria-describedby="error-pais" class="mt-1 w-full rounded border border-slate-300 bg-white px-3 py-2 focus:border-teal-700 focus:outline focus:outline-2 focus:outline-teal-700">
+              <option value="">Selecciona un país</option>
+              <option value="us">Estados Unidos</option>
+              <option value="uk">Reino Unido</option>
+            </select>
+            <p id="error-pais" class="mt-1 hidden text-sm text-red-700"></p>
+          </div>
+
+          <div>
+            <label for="region" class="block text-sm font-medium">Región de la clínica *</label>
+            <select id="region" name="region" required aria-describedby="error-region" class="mt-1 w-full rounded border border-slate-300 bg-white px-3 py-2 focus:border-teal-700 focus:outline focus:outline-2 focus:outline-teal-700">
+              <option value="">Selecciona una región</option>
+              <option value="texas">Texas</option>
+              <option value="florida">Florida</option>
+              <option value="georgia">Georgia</option>
+              <option value="londres">Londres</option>
+              <option value="manchester">Mánchester</option>
+            </select>
+            <p id="error-region" class="mt-1 hidden text-sm text-red-700"></p>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label for="atencion" class="block text-sm font-medium">Tipo de atención *</label>
+            <select id="atencion" name="atencion" required aria-describedby="error-atencion" class="mt-1 w-full rounded border border-slate-300 bg-white px-3 py-2 focus:border-teal-700 focus:outline focus:outline-2 focus:outline-teal-700">
+              <option value="">Selecciona el tipo de atención</option>
+              <option value="primaria">Atención primaria</option>
+              <option value="especialista">Consulta con especialista</option>
+              <option value="cronica">Enfermedad crónica</option>
+              <option value="preventiva">Salud preventiva</option>
+            </select>
+            <p id="error-atencion" class="mt-1 hidden text-sm text-red-700"></p>
+          </div>
+
+          <div>
+            <label for="fecha-cita" class="block text-sm font-medium">Fecha preferida *</label>
+            <input type="date" id="fecha-cita" name="fecha-cita" required aria-describedby="error-fecha-cita" class="mt-1 w-full rounded border border-slate-300 px-3 py-2 focus:border-teal-700 focus:outline focus:outline-2 focus:outline-teal-700">
+            <p id="error-fecha-cita" class="mt-1 hidden text-sm text-red-700"></p>
+          </div>
+
+          <div>
+            <label for="hora-cita" class="block text-sm font-medium">Hora preferida *</label>
+            <input type="time" id="hora-cita" name="hora-cita" required aria-describedby="error-hora-cita" class="mt-1 w-full rounded border border-slate-300 px-3 py-2 focus:border-teal-700 focus:outline focus:outline-2 focus:outline-teal-700">
+            <p id="error-hora-cita" class="mt-1 hidden text-sm text-red-700"></p>
+          </div>
+
+        </div>
+      </fieldset>
+
+      <!-- GRUPO 3: PREFERENCIAS DE CONTACTO -->
+      <fieldset class="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+        <legend class="px-2 text-lg font-semibold text-teal-700">Preferencias de contacto</legend>
+        <div class="mt-4 space-y-4">
+
+          <fieldset id="canal" aria-describedby="error-canal">
+            <legend class="text-sm font-medium">¿Cómo quieres recibir tu recordatorio? *</legend>
+            <div class="mt-2 flex flex-col gap-2 sm:flex-row sm:gap-6">
+              <label class="flex items-center gap-2 text-sm">
+                <input type="radio" name="canal" value="sms" required class="h-4 w-4 accent-teal-700"> SMS
+              </label>
+              <label class="flex items-center gap-2 text-sm">
+                <input type="radio" name="canal" value="correo" class="h-4 w-4 accent-teal-700"> Correo electrónico
+              </label>
+              <label class="flex items-center gap-2 text-sm">
+                <input type="radio" name="canal" value="app" class="h-4 w-4 accent-teal-700"> App
+              </label>
+            </div>
+            <p id="error-canal" class="mt-1 hidden text-sm text-red-700"></p>
+          </fieldset>
+
+          <div>
+            <label for="idioma" class="block text-sm font-medium">Idioma preferido (opcional)</label>
+            <select id="idioma" name="idioma" class="mt-1 w-full rounded border border-slate-300 bg-white px-3 py-2 focus:border-teal-700 focus:outline focus:outline-2 focus:outline-teal-700">
+              <option value="">Sin preferencia</option>
+              <option value="en">Inglés</option>
+              <option value="es">Español</option>
+            </select>
+          </div>
+
+        </div>
+      </fieldset>
+
+      <!-- GRUPO 4: CONSENTIMIENTO -->
+      <fieldset class="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+        <legend class="px-2 text-lg font-semibold text-teal-700">Consentimiento</legend>
+        <div class="mt-4">
+          <label class="flex items-start gap-3 text-sm">
+            <input type="checkbox" id="consentimiento" name="consentimiento" required aria-describedby="error-consentimiento" class="mt-1 h-4 w-4 accent-teal-700">
+            <span>Acepto que HealthCore trate mis datos personales para gestionar mi cita, conforme a HIPAA (EE.UU.) y UK GDPR (Reino Unido). *</span>
+          </label>
+          <p id="error-consentimiento" class="mt-1 hidden text-sm text-red-700"></p>
+        </div>
+      </fieldset>
+
+      <!-- MENSAJES Y BOTONES -->
+      <p id="resumen-errores" role="alert" class="hidden rounded-lg border border-red-300 bg-red-50 p-4 text-sm text-red-800"></p>
+
+      <div class="flex flex-col gap-3 sm:flex-row">
+        <button type="submit" class="rounded bg-teal-700 px-6 py-3 font-semibold text-white hover:bg-teal-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-700">Enviar solicitud</button>
+        <button type="reset" class="rounded border border-slate-400 bg-white px-6 py-3 font-semibold text-slate-700 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-700">Limpiar formulario</button>
+      </div>
+
+      <div id="mensaje-exito" role="status" aria-live="polite" class="hidden rounded-lg border border-green-300 bg-green-50 p-4 text-sm text-green-800"></div>
+
+    </form>
+  </main>
+
+  <script src="validation.js" defer></script>
+</body>
+</html>
